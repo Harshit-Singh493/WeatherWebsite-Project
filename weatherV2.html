@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="../src/output.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="min-h-screen bg-gradient-to-b from-blue-500 to-white-700 text-white p-5">
+    <div id="headerLocation" class="flex md:flex-row md:w-full flex-col md:justify-around">
+
+      <div id="current"
+        class="items-center gap-4 flex flex-row justify-center bg-white/20 backdrop-blur-xl border border-white/30 shadow-xl rounded-3xl p-6 md:w-4/5 text-gray-900">
+        <svg class="w-10 h-10 sm:w-12 sm:h-12" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+           viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve"
+          fill="#000000">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <g>
+              <path fill="#ff0040"
+                d="M32,0C18.745,0,8,10.745,8,24c0,5.678,2.502,10.671,5.271,15l17.097,24.156C30.743,63.686,31.352,64,32,64 s1.257-0.314,1.632-0.844L50.729,39C53.375,35.438,56,29.678,56,24C56,10.745,45.255,0,32,0z M32,38c-7.732,0-14-6.268-14-14 s6.268-14,14-14s14,6.268,14,14S39.732,38,32,38z">
+              </path>
+              <path fill="#ff0040"
+                d="M32,12c-6.627,0-12,5.373-12,12s5.373,12,12,12s12-5.373,12-12S38.627,12,32,12z M32,34 c-5.523,0-10-4.478-10-10s4.477-10,10-10s10,4.478,10,10S37.523,34,32,34z">
+              </path>
+            </g>
+          </g>
+        </svg>
+
+        <h1 class="text-3xl sm:text-5xl">Your Location</h1>
+
+      </div>
+
+      <div id="search"
+        class="bg-white/20 backdrop-blur-xl border border-white/30 shadow-xl rounded-3xl p-4 text-gray-900 cursor-pointer w-fit m-auto mt-2.5">
+        <button class="cursor-pointer">
+          <svg class="w-6 h-6 sm:w-12 sm:h-12" fill="#000000"  viewBox="0 -0.24 28.423 28.423" id="_02_-_Search_Button"
+            data-name="02 - Search Button" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path id="Path_215" data-name="Path 215"
+                d="M14.953,2.547A12.643,12.643,0,1,0,27.6,15.19,12.649,12.649,0,0,0,14.953,2.547Zm0,2A10.643,10.643,0,1,1,4.31,15.19,10.648,10.648,0,0,1,14.953,4.547Z"
+                transform="translate(-2.31 -2.547)" fill-rule="evenodd"></path>
+              <path id="Path_216" data-name="Path 216"
+                d="M30.441,28.789l-6.276-6.276a1,1,0,1,0-1.414,1.414L29.027,30.2a1,1,0,1,0,1.414-1.414Z"
+                transform="translate(-2.31 -2.547)" fill-rule="evenodd"></path>
+            </g>
+          </svg>
+        </button>
+
+      </div>
+
+    </div>
+
+    <div id="currentDay" class=" bg-white/20 backdrop-blur-xl border border-white/30 shadow-xl rounded-3xl p-5 text-gray-900 mt-5">
+
+      <div id="currentDayStats" class="bg-white/20 backdrop-blur-xl border border-white/30 shadow-xl rounded-3xl p-5">
+        <div id="today-icon" class="flex flex-row gap-4 items-center overflow-hidden">
+          <img id="icon" class="w-10 h-10 sm:w-24 sm:h-24 md:w-28 md:h-28" src="" alt="weather icon">
+          <h1 id="weatherConditon"></h1>
+          <h1 id="currentTemp"></h1>
+        </div>
+
+        <div>
+
+        </div>
+
+        <div>
+
+        </div>
+
+        <div>
+
+        </div>
+
+        <div>
+
+        </div>
+
+    </div>
+    <div id="foreCast" class="bg-white/20 backdrop-blur-xl border border-white/30 shadow-xl rounded-3xl p-5 text-gray-900 mt-5 ">
+    
+      <h1 class="text-center font-bold">Forecast for Upcoming 7-days</h1>
+      <canvas id="myChart"></canvas>
+    </div>
+
+  </div>
+  
+
+  <script src="./weatherV2.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.2/lottie.min.js"></script>
+</body>
+
+</html>
