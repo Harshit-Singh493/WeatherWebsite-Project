@@ -6,11 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YouWeather!</title>
   <link href="../src/output.css" rel="stylesheet">
+  <style>
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;  
+      background-color: rgb(255, 255, 255);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      z-index: 999999;
+    }
+  
+  
+  </style>
 </head>
 
 <body>
-  <div id="loader" class="bg-black"></div>
-  <div class="min-h-screen bg-gradient-to-b from-blue-500 to-white-700 text-white p-5">
+
+  <div id="loader">
+    <img src="./icons/Weather/832.svg" alt="">
+    <h1 class="mt-5">Loading Content Please Wait!</h1>
+  </div>
+
+
+
+  <div id="main_content" class="min-h-screen bg-gradient-to-b from-blue-500 to-white-700 text-white p-5">
     <div id="headerLocation" class="flex md:flex-row md:w-full flex-col md:justify-around items-center">
 
       <div id="current"
@@ -63,7 +87,7 @@
       <div id="currentDayStats" class="bg-white/20 backdrop-blur-xl border border-white/30 shadow-xl rounded-3xl p-5">
         <div id="today-icon" class="gap-4 items-center overflow-hidden bg-white/20 backdrop-blur-xl border border-white/30 shadow-xl rounded-3xl p-5">
           <div class="w-12 h-12 sm:w-24 sm:h-24 md:w-28 md:h-28">
-            <img id="icon" class="hidden" src="" alt="weather icon">
+            <img id="icon" class="hidden " src="" alt="weather icon">
           </div>
           <h1 id="weatherConditon"></h1>
           <h1 id="currentTemp"></h1>
@@ -87,7 +111,7 @@
         </div>
 
     </div>
-    <div id="foreCast" class="bg-white/20 backdrop-blur-xl border border-white/30 shadow-xl rounded-3xl p-5 text-gray-900 mt-5 ">
+    <div id="foreCast" class="bg-white/20 backdrop-blur-xl border border-white/30 shadow-xl rounded-3xl p-5 text-gray-900 mt-5 h-8">
     
       <h1 class="text-center font-bold">Forecast for Upcoming 7-days</h1>
       <canvas id="myChart"></canvas>

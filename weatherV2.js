@@ -6,14 +6,14 @@ navigator.geolocation.getCurrentPosition((pos) => {
   const long = pos.coords.longitude
 
   fetchUser(lat, long)
+
 }, (err) => {
   alert(err, "Error Getting Location Please allow Location")
 })
 
 
 async function fetchUser(lat,long) {
-  //const now = new Date()
-  //const currentHour = now.getHours()
+
   try {
     const apiData = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${long}&current_weather=true&daily=weathercode,temperature_2m_max,temperature_2m_min,uv_index_max,precipitation_probability_max,wind_speed_10m_max&temperature_unit=celsius&wind_speed_unit=kmh&precipitation_unit=mm&timezone=auto&hourly=apparent_temperature`)
 
@@ -159,16 +159,14 @@ async function fetchUser(lat,long) {
         return 'icons/Weather/thunderstorms-night.svg'
       }
     }
-    document.getElementById('icon').classList.remove('hidden')
+    //document.getElementById('icon').classList.remove('hidden')
     document.getElementById('icon').src = getIcon(code, isDay) 
     document.getElementById('currentTemp').innerHTML = weathData.current_weather.temperature
      
-
+    document.getElementById('loader').remove()
   } catch (error) {
+    
     log(error)
   }
   
-
-
-
 }
